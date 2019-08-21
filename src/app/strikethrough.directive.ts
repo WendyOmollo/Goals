@@ -12,7 +12,7 @@ export class StrikethroughDirective {
   @HostListener('dblclick') onDoubleClicks(){
     this.Deco ('None')
   }
-  private Deco(action:string){
+private Deco(action:string){
     this.elem.nativeElement.style.textDecoration = action;
   }
 }
