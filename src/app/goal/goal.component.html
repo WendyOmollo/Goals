@@ -5,12 +5,13 @@
       <div class='row'>
         <div class='col-md-6'>
         <div *ngFor = 'let goal of goals;let i = index'>
-      <h5 appStrikethrough>{{goal.name}} {{goal.completeDate|date}}
-      </h5>
-      
-      <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
-        <app-goal-detail *ngIf = 'goal.showDescription'[goal]='goal' (isComplete) = 'deleteGoal($event,i)'></app-goal-detail>
+          <div>
+      <h6  id={{i}} appStrikethrough>{{goal.name}} due on {{goal.completeDate|date}}
+      </h6>
+      <button class="btn btn-primary" (click)='goToUrl(goal.id)'>View Details</button>
+      <button (click) = 'deleteGoal(i)' class="btn btn-outline-danger">Delete Goal</button>
     </div>
+        </div>
         </div>
         <div class='col-md-6'>
           <app-goal-form (addGoal) = 'addNewGoal($event,i)'></app-goal-form>

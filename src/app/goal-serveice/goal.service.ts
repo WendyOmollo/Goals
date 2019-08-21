@@ -15,5 +15,12 @@ export class GoalService {
         new Goal (6,'Plot my world domination plan','Cause I am an evil overlord',new Date(2019,12,14)),
        ];
     }
-  constructor() { }
-}
+    getGoal(id){
+      for (let goal of this.getGoals( )){
+        if (goal.id == id){
+          return goal;
+        }
+      }
+    }
+    constructor() { }
+  }

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoalComponent } from './goal/goal.component';
@@ -12,8 +13,12 @@ import { GoalFormComponent } from './goal-form/goal-form.component';
 import { FormsModule } from '@angular/forms';
 import { AlertService } from './alert-service/alert.service';
 import { Goal } from './goal';
+
 import { GoalService } from './goal-serveice/goal.service';
 import { HttpClientModule} from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,10 @@ import { HttpClientModule} from '@angular/common/http';
     GoalDetailComponent,
     StrikethroughDirective,
     DateCountPipe,
-    GoalFormComponent
+    GoalFormComponent,
+    AboutComponent,
+    NavbarComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
